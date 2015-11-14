@@ -7,6 +7,6 @@
 3. Starting the app:
 ```ember serve```
 4. In browser:
-```http://localhost:4200/```
+http://localhost:4200/
 5. OPTIONAL - Creating a Firefox OS manifest file:
 ```ember g fxos-manifest```
