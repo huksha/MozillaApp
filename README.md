@@ -1,3 +1,3 @@
-# MozillaApp
-App for HTML5
--------------
+# MozillaApp for HTML5
+
+Testing git :)
