@@ -1,0 +1,18 @@
+{
+  "name": "MyProgress",
+  "description": "Follow your progress with this awesome app.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/images/icon-128.png",
+    "512": "/images/icon-512.png"
+  },
+  "developer": {
+    "name": "Molnár Barnabás",
+    "email": "molnarbarney@gmail.com"
+  },
+  "permissions": {
+    "desktop-notification": {
+      "description": "Needed for creating system notifications."
+    }
+  }
+}

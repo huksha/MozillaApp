@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>MyProgress - Diary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-128.png">
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  
+  <!-- Controllers -->
+  <script src="js/mainController.js"></script>
+  <script src="js/diaryController.js"></script>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Datepicker -->
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+  <script>
+  	$(function() {
+  		$( "#datepicker" ).datepicker();
+  	});
+  </script>
+  <script>
+  	window.onload = loadDiary();
+  </script>
+  <script>
+  	function validateQty(event) {
+	    var key = window.event ? event.keyCode : event.which;
+
+	if (event.keyCode == 8 || event.keyCode == 46
+	 || event.keyCode == 37 || event.keyCode == 39) {
+	    return true;
+	}
+	else if ( key < 48 || key > 57 ) {
+	    return false;
+	}
+	else return true;
+	};
+  </script
+</head>
+
+<body>
+	<div class="dropdown">
+	  <button class="btn btn-default dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="float:left;">
+	  	<span class="glyphicon glyphicon-menu-hamburger"></span>
+	  </button>
+	  <div style="text-align: center;  overflow: hidden; ">
+	    	<h3><img alt="Brand" height="20px" src="images/icon-128.png"> MyProgress</h3>
+	  </div>
+	  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="diary.html">Diary</a></li>
+	    <li><a href="workouts.html">Workouts</a></li>
+	    <li><a href="progress.html">Progress</a></li>
+	    <li role="separator" class="divider"></li>
+	    <li><a href="diary.html" onclick="exit();">Exit</a></li>
+	  </ul>
+	</div>
+
+	<div class="container">
+		<div class="row">
+	        <div align="center">
+
+	        	<div id="workoutsaver" style="display:none;">
+
+		       		<br>
+		        	<h4 id="your-workout-name" style="display:none;"></h4>
+		        	<br>
+		        	<h4 id="your-workout-date" style="display:none;"></h5>
+		        	<br>
+		        	<br>
+		        	<div id="editexerciselist" style="display:none;"></div>
+			        <br>
+			        <a id="save" class="btn btn-success" href="javascript: saveWorkout()" style="display:none;">Save workout</a>
+
+		        </div>
+
+	        	<div id="workoutselector">
+	        		<br>
+		        	<h4 id="add-new-workout"><b>Add new workout:</b></h4>
+		        	<br>
+
+		        	<div id="workout-name-div" class="input-group" style="">		        		
+		        		<span class="input-group-addon" id="basic-addon1">Workout</span>
+		        		<input type="text" class="form-control" placeholder="Short description" aria-describedby="basic-addon1" id="workout-name">
+		        	</div>
+		        	<br>
+		        	<div id="workout-date-div" class="input-group">
+		        		<span class="input-group-addon" id="basic-addon1">Date</span>
+		        		<input type="text" class="form-control" id="datepicker" name="datepicker"/>
+		        	</div>
+		        	<br>
+		        	<br/>
+		        	
+		        	<div id="exerciselist"></div>
+		        	<br>
+
+		        	<a id="edit"class="btn btn-primary" href="javascript: getInputValues()">Continue to edit details</a>
+		        	<br>
+		        	<br>
+
+	        	</div>
+
+	        </div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>MyProgress - Progress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-128.png">
+  
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="dropdown">
+	  <button class="btn btn-default dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="float:left;">
+	  	<span class="glyphicon glyphicon-menu-hamburger"></span>
+	  </button>
+	  <div style="text-align: center;  overflow: hidden; ">
+	    	<h3><img alt="Brand" height="20px" src="images/icon-128.png"> MyProgress</h3>
+	  </div>
+	  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="diary.html">Diary</a></li>
+	    <li><a href="workouts.html">Workouts</a></li>
+	    <li><a href="progress.html">Progress</a></li>
+	    <li role="separator" class="divider"></li>
+	    <li><a href="progress.html" onclick="exit();">Exit</a></li>
+	  </ul>
+	</div>
+
+	<div class="container">
+		<div class="row">
+	        <div align="center">
+	        	<br>
+	        	<h4><b>Your progresses in specific exercises</b></h4>
+	        	<br>
+	        	<div id="workoutdiarylist"></div>
+	        </div>
+	      </div>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Controllers -->
+	<script src="js/mainController.js"></script>
+	<script src="js/progressController.js"></script>
+	<script>
+  		window.onload = loadLocalStorage();
+  	</script>
+</body>
+</html>

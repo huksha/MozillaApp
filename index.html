@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>MyProgress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" type="image/png" href="images/icon-128.png">
+  <!-- Controllers -->
+  <script src="js/mainController.js"></script>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="dropdown">
+	  <button class="btn btn-default dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="float:left;">
+	  	<span class="glyphicon glyphicon-menu-hamburger"></span>
+	  </button>
+	  <div style="text-align: center;  overflow: hidden; ">
+	    	<h3><img alt="Brand" height="20px" src="images/icon-128.png"> MyProgress</h3>
+	  </div>
+	  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="diary.html">Diary</a></li>
+	    <li><a href="workouts.html">Workouts</a></li>
+	    <li><a href="progress.html">Progress</a></li>
+	    <li role="separator" class="divider"></li>
+	    <li><a href="index.html" onclick="exit();">Exit</a></li>
+	  </ul>
+	</div>
+
+	<div class="container">
+		<div class="row">
+	        <div align="center">
+	          <h2>Do You want more?</h2>
+	          <p>This is Your chance to change Your life forever! What are You waiting for?</p>
+	          <p><a class="btn btn-primary" href="diary.html" role="button">Let's start! &raquo;</a></p>
+	          <p>About using the program:</p>
+	          <ul style="text-align:left;">
+	          	<li>Add new workouts to your diary in the <b>Diary</b> menu</li>
+	          	<li>Follow your workouts in the <b>Workouts</b> menu</li>
+	          	<li>Follow your progress in the <b>Progress</b> menu</li>
+	          	<li>In the <b>Progress</b> menu, you can see how much is your improvement in the specific exercise</li>
+	          	<li>0% means that you only did it once or simply just isn't improved over the workouts</li>
+	          </ul>
+	        </div>
+	        <br><br>
+	        <div align="center">
+		        <div>Created by: <b>Molnár Barnabás</b></div>
+		        <div>E-mail: <b>molnarbarney@gmail.com</b></div>
+		    </div>
+	      </div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
